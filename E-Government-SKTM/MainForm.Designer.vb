@@ -43,6 +43,7 @@ Partial Class MainForm
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.FileSystemWatcher1 = New System.IO.FileSystemWatcher()
+        Me.HitungSuratToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2.SuspendLayout()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -131,7 +132,7 @@ Partial Class MainForm
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuExit})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HitungSuratToolStripMenuItem, Me.menuExit})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
@@ -139,7 +140,7 @@ Partial Class MainForm
         'menuExit
         '
         Me.menuExit.Name = "menuExit"
-        Me.menuExit.Size = New System.Drawing.Size(93, 22)
+        Me.menuExit.Size = New System.Drawing.Size(180, 22)
         Me.menuExit.Text = "Exit"
         '
         'HelpToolStripMenuItem
@@ -152,7 +153,7 @@ Partial Class MainForm
         'menuAbout
         '
         Me.menuAbout.Name = "menuAbout"
-        Me.menuAbout.Size = New System.Drawing.Size(107, 22)
+        Me.menuAbout.Size = New System.Drawing.Size(180, 22)
         Me.menuAbout.Text = "About"
         '
         'Label1
@@ -197,11 +198,17 @@ Partial Class MainForm
         Me.FileSystemWatcher1.EnableRaisingEvents = True
         Me.FileSystemWatcher1.SynchronizingObject = Me
         '
+        'HitungSuratToolStripMenuItem
+        '
+        Me.HitungSuratToolStripMenuItem.Name = "HitungSuratToolStripMenuItem"
+        Me.HitungSuratToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.HitungSuratToolStripMenuItem.Text = "Hitung Surat"
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 552)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -248,4 +255,5 @@ Partial Class MainForm
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
     Friend WithEvents FileSystemWatcher1 As IO.FileSystemWatcher
+    Friend WithEvents HitungSuratToolStripMenuItem As ToolStripMenuItem
 End Class

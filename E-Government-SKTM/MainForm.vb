@@ -110,4 +110,25 @@ Public Class MainForm
         Application.Exit()
     End Sub
 
+    ' Event: Calculate Average Applications per Day
+    Private Sub HitungSuratToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HitungSuratToolStripMenuItem.Click
+        ' Mendapatkan jumlah aplikasi dari ListBox
+        Dim totalApplications As Integer = lstApplications.Items.Count
+
+        ' Menampilkan InputBox untuk meminta jumlah hari
+        Dim inputDays As String = InputBox("Please enter the number of days:", "Enter Number of Days", "1")
+
+        ' Validasi input jumlah hari
+        Dim totalDays As Integer
+        If Integer.TryParse(inputDays, totalDays) AndAlso totalDays > 0 Then
+            ' Menghitung rata-rata aplikasi per hari
+            Dim averageApplications As Double = totalApplications / totalDays ' Operator Aritmatika: Pembagian (/)
+
+            ' Menampilkan hasil
+            ShowMessage($"Average applications per day: {averageApplications:F2}", MessageType.Info)
+        Else
+            ' Jika input jumlah hari tidak valid
+            ShowMessage("Please enter a valid number of days!", MessageType.Warning)
+        End If
+    End Sub
 End Class
